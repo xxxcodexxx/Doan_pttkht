@@ -34,20 +34,20 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnadd = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvNhacc = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtFax = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtSdt = new System.Windows.Forms.TextBox();
-            this.txtTennv = new System.Windows.Forms.TextBox();
+            this.txtSdtNcc = new System.Windows.Forms.TextBox();
+            this.txtTenNhacc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDiachi = new System.Windows.Forms.TextBox();
-            this.txtManv = new System.Windows.Forms.TextBox();
+            this.txtDiachiNhacc = new System.Windows.Forms.TextBox();
+            this.txtManhacc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvNhacc)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,7 @@
             this.btnHuy.TabIndex = 13;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnEdit
             // 
@@ -68,6 +69,7 @@
             this.btnEdit.TabIndex = 12;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnXoa
             // 
@@ -77,6 +79,7 @@
             this.btnXoa.TabIndex = 11;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnLuu
             // 
@@ -86,6 +89,7 @@
             this.btnLuu.TabIndex = 10;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnadd
             // 
@@ -95,10 +99,11 @@
             this.btnadd.TabIndex = 9;
             this.btnadd.Text = "Thêm";
             this.btnadd.UseVisualStyleBackColor = true;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dtgvNhacc);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(57, 210);
             this.groupBox2.Name = "groupBox2";
@@ -107,26 +112,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách Nhà Cung Cấp";
             // 
-            // dataGridView1
+            // dtgvNhacc
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(789, 144);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgvNhacc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvNhacc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvNhacc.Location = new System.Drawing.Point(3, 19);
+            this.dtgvNhacc.Name = "dtgvNhacc";
+            this.dtgvNhacc.Size = new System.Drawing.Size(789, 144);
+            this.dtgvNhacc.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtFax);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtSdt);
-            this.groupBox1.Controls.Add(this.txtTennv);
+            this.groupBox1.Controls.Add(this.txtSdtNcc);
+            this.groupBox1.Controls.Add(this.txtTenNhacc);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtDiachi);
-            this.groupBox1.Controls.Add(this.txtManv);
+            this.groupBox1.Controls.Add(this.txtDiachiNhacc);
+            this.groupBox1.Controls.Add(this.txtManhacc);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(57, 13);
@@ -135,6 +140,22 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin Nhà Cung Cấp";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(291, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 17);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Fax";
+            // 
+            // txtFax
+            // 
+            this.txtFax.Location = new System.Drawing.Point(429, 89);
+            this.txtFax.Name = "txtFax";
+            this.txtFax.Size = new System.Drawing.Size(127, 23);
+            this.txtFax.TabIndex = 12;
             // 
             // label6
             // 
@@ -145,19 +166,19 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Số điện thoại";
             // 
-            // txtSdt
+            // txtSdtNcc
             // 
-            this.txtSdt.Location = new System.Drawing.Point(621, 68);
-            this.txtSdt.Name = "txtSdt";
-            this.txtSdt.Size = new System.Drawing.Size(127, 23);
-            this.txtSdt.TabIndex = 8;
+            this.txtSdtNcc.Location = new System.Drawing.Point(621, 68);
+            this.txtSdtNcc.Name = "txtSdtNcc";
+            this.txtSdtNcc.Size = new System.Drawing.Size(127, 23);
+            this.txtSdtNcc.TabIndex = 8;
             // 
-            // txtTennv
+            // txtTenNhacc
             // 
-            this.txtTennv.Location = new System.Drawing.Point(429, 38);
-            this.txtTennv.Name = "txtTennv";
-            this.txtTennv.Size = new System.Drawing.Size(127, 23);
-            this.txtTennv.TabIndex = 7;
+            this.txtTenNhacc.Location = new System.Drawing.Point(429, 38);
+            this.txtTenNhacc.Name = "txtTenNhacc";
+            this.txtTenNhacc.Size = new System.Drawing.Size(127, 23);
+            this.txtTenNhacc.TabIndex = 7;
             // 
             // label4
             // 
@@ -177,19 +198,19 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Địa chỉ";
             // 
-            // txtDiachi
+            // txtDiachiNhacc
             // 
-            this.txtDiachi.Location = new System.Drawing.Point(142, 89);
-            this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(127, 23);
-            this.txtDiachi.TabIndex = 3;
+            this.txtDiachiNhacc.Location = new System.Drawing.Point(142, 89);
+            this.txtDiachiNhacc.Name = "txtDiachiNhacc";
+            this.txtDiachiNhacc.Size = new System.Drawing.Size(127, 23);
+            this.txtDiachiNhacc.TabIndex = 3;
             // 
-            // txtManv
+            // txtManhacc
             // 
-            this.txtManv.Location = new System.Drawing.Point(142, 38);
-            this.txtManv.Name = "txtManv";
-            this.txtManv.Size = new System.Drawing.Size(127, 23);
-            this.txtManv.TabIndex = 1;
+            this.txtManhacc.Location = new System.Drawing.Point(142, 38);
+            this.txtManhacc.Name = "txtManhacc";
+            this.txtManhacc.Size = new System.Drawing.Size(127, 23);
+            this.txtManhacc.TabIndex = 1;
             // 
             // label1
             // 
@@ -199,22 +220,6 @@
             this.label1.Size = new System.Drawing.Size(123, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Nhà Cung Cấp";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(291, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 17);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Fax";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(429, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 23);
-            this.textBox1.TabIndex = 12;
             // 
             // frm_nhacc
             // 
@@ -230,8 +235,9 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_nhacc";
             this.Text = "frm_nhacc";
+            this.Load += new System.EventHandler(this.frm_nhacc_Load);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvNhacc)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -246,17 +252,17 @@
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnadd;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvNhacc;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtSdt;
-        private System.Windows.Forms.TextBox txtTennv;
+        private System.Windows.Forms.TextBox txtSdtNcc;
+        private System.Windows.Forms.TextBox txtTenNhacc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDiachi;
-        private System.Windows.Forms.TextBox txtManv;
+        private System.Windows.Forms.TextBox txtDiachiNhacc;
+        private System.Windows.Forms.TextBox txtManhacc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFax;
     }
 }
