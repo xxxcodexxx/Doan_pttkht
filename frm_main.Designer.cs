@@ -41,18 +41,16 @@
             // btnQuanlynv
             // 
             this.btnQuanlynv.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnQuanlynv.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnQuanlynv.BackgroundImage")));
-            this.btnQuanlynv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnQuanlynv.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnQuanlynv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuanlynv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanlynv.ForeColor = System.Drawing.Color.Blue;
-            this.btnQuanlynv.Location = new System.Drawing.Point(41, 31);
+            this.btnQuanlynv.Location = new System.Drawing.Point(41, 78);
             this.btnQuanlynv.Name = "btnQuanlynv";
-            this.btnQuanlynv.Size = new System.Drawing.Size(77, 77);
+            this.btnQuanlynv.Size = new System.Drawing.Size(152, 30);
             this.btnQuanlynv.TabIndex = 0;
             this.btnQuanlynv.Text = "Quản lý Nhân viên";
-            this.btnQuanlynv.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnQuanlynv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnQuanlynv.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnQuanlynv.UseVisualStyleBackColor = false;
             this.btnQuanlynv.Click += new System.EventHandler(this.btnQuanlynv_Click);
             // 

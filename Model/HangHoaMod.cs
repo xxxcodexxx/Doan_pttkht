@@ -59,7 +59,7 @@ namespace Qlbs.Model
 
         public bool AddData(HangHoa hhObj)
         {
-            cmd.CommandText = "Insert into tb_HangHoa values ('" + hhObj.Ma + "', N'" + hhObj.TenHangHoa + "','" + hhObj.Loai + "','"+hhObj.Nhacc+ "','" + hhObj.SoLuong + "','" + hhObj.Soluongton + "','" + hhObj.DonGia + "',CONVERT(DATE,'" + hhObj.Ngaysx + "',103),CONVERT(DATE,'" + hhObj.Hsd + "',103),N'" + hhObj.Donvi + "' )";
+            cmd.CommandText = "Insert into tb_HangHoa values ('" + hhObj.Ma + "', N'" + hhObj.TenHangHoa + "','" + hhObj.Loai + "','"+hhObj.Nhacc+ "','" + hhObj.SoLuong + "','" + hhObj.Soluongton + "','" + hhObj.DonGia + "',CONVERT(DATE,'" + hhObj.Hsd + "',103),CONVERT(DATE,'" + hhObj.Hsd + "',103),N'" + hhObj.Donvi + "' )";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try
@@ -79,7 +79,7 @@ namespace Qlbs.Model
 
         public bool UpdData(HangHoa hhObj)
         {
-            cmd.CommandText = "Update tb_HangHoa set TenHH =  N'" + hhObj.TenHangHoa + "', Soluong = " + hhObj.SoLuong + ", Dongia = " + hhObj.DonGia + ", Loai = " + hhObj.Loai + ", NhaCC = N" + hhObj.Nhacc + ", Soluongton = " + hhObj.Soluongton + ", NgaySX = " + hhObj.Ngaysx + ", HSD = " + hhObj.Hsd + ", Donvi = N" + hhObj.Donvi + " Where MaHH = '" + hhObj.Ma + "'";
+            cmd.CommandText = "Update tb_HangHoa set TenHH =  N'" + hhObj.TenHangHoa + "', Soluong = " + hhObj.SoLuong + ", Dongia = " + hhObj.DonGia + ", Loai = N'" + hhObj.Loai + "', NhaCC = N'" + hhObj.Nhacc + "', Soluongton = " + hhObj.Soluongton + ", NgaySX = CONVERT(DATE,'" + hhObj.Ngaysx + "',103), HSD = CONVERT(DATE,'" + hhObj.Hsd + "',103), Donvi = N'" + hhObj.Donvi + "' Where MaHH = '" + hhObj.Ma + "'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try

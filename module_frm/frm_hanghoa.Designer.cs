@@ -36,6 +36,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtgvDS = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtHansd = new System.Windows.Forms.DateTimePicker();
             this.txtNgsx = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,13 +50,12 @@
             this.txtSlton = new System.Windows.Forms.TextBox();
             this.txtTenhh = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtLoaih = new System.Windows.Forms.TextBox();
             this.txtSlco = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMahh = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNhacc = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txtLoaih = new System.Windows.Forms.ComboBox();
+            this.txtNhacc = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDS)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -134,6 +134,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtNhacc);
+            this.groupBox1.Controls.Add(this.txtLoaih);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtHansd);
             this.groupBox1.Controls.Add(this.txtNgsx);
@@ -148,7 +149,6 @@
             this.groupBox1.Controls.Add(this.txtSlton);
             this.groupBox1.Controls.Add(this.txtTenhh);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtLoaih);
             this.groupBox1.Controls.Add(this.txtSlco);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtMahh);
@@ -160,6 +160,15 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin Hàng Hóa";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(259, 182);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 17);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Nhà Cung Cấp";
             // 
             // txtHansd
             // 
@@ -268,13 +277,6 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Tên Mặt Hàng";
             // 
-            // txtLoaih
-            // 
-            this.txtLoaih.Location = new System.Drawing.Point(114, 92);
-            this.txtLoaih.Name = "txtLoaih";
-            this.txtLoaih.Size = new System.Drawing.Size(127, 23);
-            this.txtLoaih.TabIndex = 5;
-            // 
             // txtSlco
             // 
             this.txtSlco.Location = new System.Drawing.Point(368, 92);
@@ -307,21 +309,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã mặt hàng";
             // 
+            // txtLoaih
+            // 
+            this.txtLoaih.FormattingEnabled = true;
+            this.txtLoaih.Location = new System.Drawing.Point(114, 92);
+            this.txtLoaih.Name = "txtLoaih";
+            this.txtLoaih.Size = new System.Drawing.Size(127, 24);
+            this.txtLoaih.TabIndex = 23;
+            // 
             // txtNhacc
             // 
+            this.txtNhacc.FormattingEnabled = true;
             this.txtNhacc.Location = new System.Drawing.Point(368, 179);
             this.txtNhacc.Name = "txtNhacc";
-            this.txtNhacc.Size = new System.Drawing.Size(127, 23);
-            this.txtNhacc.TabIndex = 22;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(259, 182);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 17);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Nhà Cung Cấp";
+            this.txtNhacc.Size = new System.Drawing.Size(127, 24);
+            this.txtNhacc.TabIndex = 24;
             // 
             // frm_hanghoa
             // 
@@ -361,7 +363,6 @@
         private System.Windows.Forms.TextBox txtSlton;
         private System.Windows.Forms.TextBox txtTenhh;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtLoaih;
         private System.Windows.Forms.TextBox txtSlco;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMahh;
@@ -374,7 +375,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDonvi;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtNhacc;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox txtLoaih;
+        private System.Windows.Forms.ComboBox txtNhacc;
     }
 }

@@ -54,7 +54,8 @@ namespace Qlbs.module_frm
 
         private void btnQllh_Click(object sender, EventArgs e)
         {
-            
+            frm_loaihang form_loaih = new frm_loaihang();
+            form_loaih.Show();
         }
     }
 }

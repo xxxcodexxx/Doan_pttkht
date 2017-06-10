@@ -75,7 +75,7 @@ namespace Qlbs.module_frm
             hh.DonGia = int.Parse(txtDg.Text.Trim());
             hh.SoLuong = int.Parse(txtSlco.Text.Trim());
             hh.Donvi = txtDonvi.Text.Trim();
-            hh.Ngaysx = txtNgsx.Text.Trim();
+            hh.Hsd = txtNgsx.Text.Trim();
             hh.Hsd = txtHansd.Text.Trim();
         }
 
@@ -98,17 +98,39 @@ namespace Qlbs.module_frm
             txtNgsx.Enabled = e;
         }
 
+        private void load_ncc()
+        {
+            NhaCCctrl khctr = new NhaCCctrl();
+            txtNhacc.DataSource = khctr.getData();
+            txtNhacc.DisplayMember = "TenNCC";
+            txtNhacc.ValueMember = "MaNhaCC";
+            txtNhacc.SelectedIndex = 0;
+        }
+
+        private void load_loaihang()
+        {
+            LoaiHangctrl khctr = new LoaiHangctrl();
+            txtLoaih.DataSource = khctr.getData();
+            txtLoaih.DisplayMember = "Tenloai";
+            txtLoaih.ValueMember = "Maloai";
+            txtLoaih.SelectedIndex = 0;
+        }
+
         private void btnadd_Click(object sender, EventArgs e)
         {
             flagLuu = 0;
             clearData();
             DisEnl(true);
+            load_loaihang();
+            load_ncc();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             flagLuu = 1;
             DisEnl(true);
+            load_loaihang();
+            load_ncc();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
