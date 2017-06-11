@@ -53,6 +53,8 @@
             // 
             // btnHuy
             // 
+            this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnHuy.AutoSize = true;
             this.btnHuy.Location = new System.Drawing.Point(600, 175);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
@@ -63,6 +65,8 @@
             // 
             // btnEdit
             // 
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEdit.AutoSize = true;
             this.btnEdit.Location = new System.Drawing.Point(302, 175);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
@@ -73,6 +77,8 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnXoa.AutoSize = true;
             this.btnXoa.Location = new System.Drawing.Point(401, 175);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
@@ -83,6 +89,8 @@
             // 
             // btnLuu
             // 
+            this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLuu.AutoSize = true;
             this.btnLuu.Location = new System.Drawing.Point(501, 175);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
@@ -93,6 +101,8 @@
             // 
             // btnadd
             // 
+            this.btnadd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnadd.AutoSize = true;
             this.btnadd.Location = new System.Drawing.Point(209, 175);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(75, 23);
@@ -103,6 +113,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dtgvNhacc);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(57, 210);
@@ -114,15 +126,24 @@
             // 
             // dtgvNhacc
             // 
+            this.dtgvNhacc.AllowUserToAddRows = false;
+            this.dtgvNhacc.AllowUserToDeleteRows = false;
+            this.dtgvNhacc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgvNhacc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvNhacc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvNhacc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvNhacc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvNhacc.Location = new System.Drawing.Point(3, 19);
             this.dtgvNhacc.Name = "dtgvNhacc";
+            this.dtgvNhacc.ReadOnly = true;
+            this.dtgvNhacc.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtgvNhacc.Size = new System.Drawing.Size(789, 144);
             this.dtgvNhacc.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtFax);
             this.groupBox1.Controls.Add(this.label6);
@@ -152,6 +173,8 @@
             // 
             // txtFax
             // 
+            this.txtFax.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFax.Location = new System.Drawing.Point(429, 89);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(127, 23);
@@ -159,6 +182,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(633, 48);
             this.label6.Name = "label6";
@@ -168,6 +192,7 @@
             // 
             // txtSdtNcc
             // 
+            this.txtSdtNcc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSdtNcc.Location = new System.Drawing.Point(621, 68);
             this.txtSdtNcc.Name = "txtSdtNcc";
             this.txtSdtNcc.Size = new System.Drawing.Size(127, 23);
@@ -175,6 +200,8 @@
             // 
             // txtTenNhacc
             // 
+            this.txtTenNhacc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTenNhacc.Location = new System.Drawing.Point(429, 38);
             this.txtTenNhacc.Name = "txtTenNhacc";
             this.txtTenNhacc.Size = new System.Drawing.Size(127, 23);
@@ -241,6 +268,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

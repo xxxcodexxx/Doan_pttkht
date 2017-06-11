@@ -30,6 +30,24 @@ namespace Qlbs.module_frm
             DisEnl(false);
         }
 
+        private void load_ncc()
+        {
+            NhaCCctrl khctr = new NhaCCctrl();
+            txtNhacc.DataSource = khctr.getData();
+            txtNhacc.DisplayMember = "TenNCC";
+            txtNhacc.ValueMember = "MaNhaCC";
+            txtNhacc.SelectedIndex = 0;
+        }
+
+        private void load_loaihang()
+        {
+            LoaiHangctrl khctr = new LoaiHangctrl();
+            txtLoaih.DataSource = khctr.getData();
+            txtLoaih.DisplayMember = "Tenloai";
+            txtLoaih.ValueMember = "Maloai";
+            txtLoaih.SelectedIndex = 0;
+        }
+
         private void binhding()
         {
             txtMahh.DataBindings.Clear();
@@ -40,6 +58,8 @@ namespace Qlbs.module_frm
             txtLoaih.DataBindings.Add("Text", dtgvDS.DataSource, "Loai");
             txtSlton.DataBindings.Clear();
             txtSlton.DataBindings.Add("Text", dtgvDS.DataSource, "Soluongton");
+            txtNhacc.DataBindings.Clear();
+            txtNhacc.DataBindings.Add("Text", dtgvDS.DataSource, "NhaCC");
             txtDg.DataBindings.Clear();
             txtDg.DataBindings.Add("Text", dtgvDS.DataSource, "Dongia");
             txtSlco.DataBindings.Clear();
@@ -96,24 +116,6 @@ namespace Qlbs.module_frm
             txtSlton.Enabled = false;
             txtHansd.Enabled = e;
             txtNgsx.Enabled = e;
-        }
-
-        private void load_ncc()
-        {
-            NhaCCctrl khctr = new NhaCCctrl();
-            txtNhacc.DataSource = khctr.getData();
-            txtNhacc.DisplayMember = "TenNCC";
-            txtNhacc.ValueMember = "MaNhaCC";
-            txtNhacc.SelectedIndex = 0;
-        }
-
-        private void load_loaihang()
-        {
-            LoaiHangctrl khctr = new LoaiHangctrl();
-            txtLoaih.DataSource = khctr.getData();
-            txtLoaih.DisplayMember = "Tenloai";
-            txtLoaih.ValueMember = "Maloai";
-            txtLoaih.SelectedIndex = 0;
         }
 
         private void btnadd_Click(object sender, EventArgs e)

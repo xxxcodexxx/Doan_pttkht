@@ -58,6 +58,7 @@
             // 
             // btnHuy
             // 
+            this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnHuy.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHuy.BackgroundImage")));
             this.btnHuy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHuy.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -76,6 +77,7 @@
             // 
             // btnEdit
             // 
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEdit.Location = new System.Drawing.Point(261, 200);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 42);
@@ -86,6 +88,7 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.Location = new System.Drawing.Point(360, 200);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 42);
@@ -96,6 +99,7 @@
             // 
             // btnLuu
             // 
+            this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLuu.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLuu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLuu.BackgroundImage")));
             this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -113,6 +117,7 @@
             // 
             // btnadd
             // 
+            this.btnadd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnadd.Location = new System.Drawing.Point(168, 200);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(75, 42);
@@ -123,6 +128,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dtgkh);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(16, 254);
@@ -134,9 +141,10 @@
             // 
             // dtgkh
             // 
+            this.dtgkh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgkh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgkh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgkh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgkh.Location = new System.Drawing.Point(3, 19);
             this.dtgkh.Name = "dtgkh";
             this.dtgkh.Size = new System.Drawing.Size(789, 144);
@@ -144,6 +152,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtDiem);
             this.groupBox1.Controls.Add(this.txtGtkh);
@@ -177,6 +187,8 @@
             // 
             // txtDiem
             // 
+            this.txtDiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDiem.Enabled = false;
             this.txtDiem.Location = new System.Drawing.Point(403, 147);
             this.txtDiem.Name = "txtDiem";
@@ -195,6 +207,7 @@
             // 
             // txtNskh
             // 
+            this.txtNskh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNskh.Enabled = false;
             this.txtNskh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtNskh.Location = new System.Drawing.Point(651, 42);
@@ -204,6 +217,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(540, 47);
             this.label5.Name = "label5";
@@ -213,6 +227,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(540, 108);
             this.label6.Name = "label6";
@@ -222,6 +237,7 @@
             // 
             // txtSdtkh
             // 
+            this.txtSdtkh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSdtkh.Enabled = false;
             this.txtSdtkh.Location = new System.Drawing.Point(651, 105);
             this.txtSdtkh.Name = "txtSdtkh";
@@ -230,6 +246,8 @@
             // 
             // txtTenkh
             // 
+            this.txtTenkh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTenkh.Enabled = false;
             this.txtTenkh.Location = new System.Drawing.Point(403, 44);
             this.txtTenkh.Name = "txtTenkh";
@@ -256,6 +274,8 @@
             // 
             // txtDiachikh
             // 
+            this.txtDiachikh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDiachikh.Enabled = false;
             this.txtDiachikh.Location = new System.Drawing.Point(404, 105);
             this.txtDiachikh.Name = "txtDiachikh";

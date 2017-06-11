@@ -49,17 +49,23 @@
     <Compile Include="Class\HangHoa.cs" />
     <Compile Include="Class\HoaDonXuat.cs" />
     <Compile Include="Class\KhachHang.cs" />
+    <Compile Include="Class\LoaiHang.cs" />
+    <Compile Include="Class\NhaCungCap.cs" />
     <Compile Include="Class\Nhanvien.cs" />
     <Compile Include="Control\ChiTietHoaDonXuatctrl.cs" />
     <Compile Include="Control\HangHoactrl.cs" />
     <Compile Include="Control\HoaDonXuatctrl.cs" />
     <Compile Include="Control\KhachHangctrl.cs" />
+    <Compile Include="Control\LoaiHangctrl.cs" />
+    <Compile Include="Control\NhaCCctrl.cs" />
     <Compile Include="Control\NhanVienctrl.cs" />
     <Compile Include="Model\ChiTietHoaDonXuatMod.cs" />
     <Compile Include="Model\ConnectSql.cs" />
     <Compile Include="Model\HangHoaMod.cs" />
     <Compile Include="Model\HoaDonXuatMod.cs" />
     <Compile Include="Model\KhachHangModel.cs" />
+    <Compile Include="Model\LoaiHangMod.cs" />
+    <Compile Include="Model\NhaCungCapMod.cs" />
     <Compile Include="Model\NhanVienModel.cs" />
     <Compile Include="module_frm\frm_hanghoa.cs">
       <SubType>Form</SubType>

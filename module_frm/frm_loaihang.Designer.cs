@@ -47,6 +47,7 @@
             // 
             // btnHuy
             // 
+            this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnHuy.Location = new System.Drawing.Point(576, 116);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
@@ -57,6 +58,7 @@
             // 
             // btnEdit
             // 
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEdit.Location = new System.Drawing.Point(278, 116);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
@@ -67,6 +69,7 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.Location = new System.Drawing.Point(377, 116);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
@@ -77,6 +80,7 @@
             // 
             // btnLuu
             // 
+            this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLuu.Location = new System.Drawing.Point(477, 116);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
@@ -87,6 +91,7 @@
             // 
             // btnadd
             // 
+            this.btnadd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnadd.Location = new System.Drawing.Point(185, 116);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(75, 23);
@@ -97,6 +102,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dtgvLh);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(33, 161);
@@ -108,8 +115,10 @@
             // 
             // dtgvLh
             // 
+            this.dtgvLh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgvLh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvLh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvLh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvLh.Location = new System.Drawing.Point(3, 19);
             this.dtgvLh.Name = "dtgvLh";
             this.dtgvLh.Size = new System.Drawing.Size(789, 144);
@@ -117,6 +126,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.txtTenh);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtMah);
@@ -131,6 +142,7 @@
             // 
             // txtTenh
             // 
+            this.txtTenh.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTenh.Location = new System.Drawing.Point(479, 28);
             this.txtTenh.Name = "txtTenh";
             this.txtTenh.Size = new System.Drawing.Size(127, 23);
@@ -138,6 +150,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(370, 31);
             this.label4.Name = "label4";
@@ -147,6 +160,7 @@
             // 
             // txtMah
             // 
+            this.txtMah.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMah.Location = new System.Drawing.Point(225, 31);
             this.txtMah.Name = "txtMah";
             this.txtMah.Size = new System.Drawing.Size(127, 23);
@@ -154,6 +168,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(122, 34);
             this.label1.Name = "label1";

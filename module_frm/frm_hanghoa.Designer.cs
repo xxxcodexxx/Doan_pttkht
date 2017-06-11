@@ -36,6 +36,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtgvDS = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNhacc = new System.Windows.Forms.ComboBox();
+            this.txtLoaih = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtHansd = new System.Windows.Forms.DateTimePicker();
             this.txtNgsx = new System.Windows.Forms.DateTimePicker();
@@ -54,8 +56,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMahh = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtLoaih = new System.Windows.Forms.ComboBox();
-            this.txtNhacc = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDS)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -63,6 +63,7 @@
             // 
             // btnHuy
             // 
+            this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnHuy.Location = new System.Drawing.Point(633, 252);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
@@ -73,6 +74,7 @@
             // 
             // btnEdit
             // 
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEdit.Location = new System.Drawing.Point(335, 252);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
@@ -83,6 +85,7 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.Location = new System.Drawing.Point(434, 252);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
@@ -93,6 +96,7 @@
             // 
             // btnLuu
             // 
+            this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLuu.Location = new System.Drawing.Point(534, 252);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
@@ -103,6 +107,7 @@
             // 
             // btnadd
             // 
+            this.btnadd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnadd.Location = new System.Drawing.Point(242, 252);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(75, 23);
@@ -113,6 +118,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dtgvDS);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(90, 305);
@@ -124,6 +131,7 @@
             // 
             // dtgvDS
             // 
+            this.dtgvDS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvDS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvDS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvDS.Location = new System.Drawing.Point(3, 19);
@@ -133,6 +141,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.txtNhacc);
             this.groupBox1.Controls.Add(this.txtLoaih);
             this.groupBox1.Controls.Add(this.label10);
@@ -161,6 +171,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin Hàng Hóa";
             // 
+            // txtNhacc
+            // 
+            this.txtNhacc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNhacc.FormattingEnabled = true;
+            this.txtNhacc.Location = new System.Drawing.Point(368, 179);
+            this.txtNhacc.Name = "txtNhacc";
+            this.txtNhacc.Size = new System.Drawing.Size(127, 24);
+            this.txtNhacc.TabIndex = 24;
+            // 
+            // txtLoaih
+            // 
+            this.txtLoaih.FormattingEnabled = true;
+            this.txtLoaih.Location = new System.Drawing.Point(114, 92);
+            this.txtLoaih.Name = "txtLoaih";
+            this.txtLoaih.Size = new System.Drawing.Size(127, 24);
+            this.txtLoaih.TabIndex = 23;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -172,6 +200,8 @@
             // 
             // txtHansd
             // 
+            this.txtHansd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtHansd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtHansd.Location = new System.Drawing.Point(368, 134);
             this.txtHansd.Name = "txtHansd";
@@ -206,6 +236,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(518, 139);
             this.label7.Name = "label7";
@@ -215,10 +246,12 @@
             // 
             // txtDonvi
             // 
+            this.txtDonvi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDonvi.Location = new System.Drawing.Point(615, 136);
             this.txtDonvi.Name = "txtDonvi";
             this.txtDonvi.Size = new System.Drawing.Size(127, 23);
             this.txtDonvi.TabIndex = 15;
+            this.txtDonvi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -231,15 +264,18 @@
             // 
             // txtDg
             // 
+            this.txtDg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDg.Location = new System.Drawing.Point(615, 44);
             this.txtDg.Name = "txtDg";
             this.txtDg.Size = new System.Drawing.Size(127, 23);
             this.txtDg.TabIndex = 11;
+            this.txtDg.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(527, 44);
+            this.label5.Location = new System.Drawing.Point(518, 44);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 17);
             this.label5.TabIndex = 10;
@@ -247,6 +283,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(518, 95);
             this.label6.Name = "label6";
@@ -256,17 +293,22 @@
             // 
             // txtSlton
             // 
+            this.txtSlton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSlton.Location = new System.Drawing.Point(615, 92);
             this.txtSlton.Name = "txtSlton";
             this.txtSlton.Size = new System.Drawing.Size(127, 23);
             this.txtSlton.TabIndex = 8;
+            this.txtSlton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTenhh
             // 
+            this.txtTenhh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTenhh.Location = new System.Drawing.Point(368, 41);
             this.txtTenhh.Name = "txtTenhh";
             this.txtTenhh.Size = new System.Drawing.Size(127, 23);
             this.txtTenhh.TabIndex = 7;
+            this.txtTenhh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -279,10 +321,13 @@
             // 
             // txtSlco
             // 
+            this.txtSlco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSlco.Location = new System.Drawing.Point(368, 92);
             this.txtSlco.Name = "txtSlco";
             this.txtSlco.Size = new System.Drawing.Size(127, 23);
             this.txtSlco.TabIndex = 3;
+            this.txtSlco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -299,6 +344,7 @@
             this.txtMahh.Name = "txtMahh";
             this.txtMahh.Size = new System.Drawing.Size(127, 23);
             this.txtMahh.TabIndex = 1;
+            this.txtMahh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -308,22 +354,6 @@
             this.label1.Size = new System.Drawing.Size(90, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã mặt hàng";
-            // 
-            // txtLoaih
-            // 
-            this.txtLoaih.FormattingEnabled = true;
-            this.txtLoaih.Location = new System.Drawing.Point(114, 92);
-            this.txtLoaih.Name = "txtLoaih";
-            this.txtLoaih.Size = new System.Drawing.Size(127, 24);
-            this.txtLoaih.TabIndex = 23;
-            // 
-            // txtNhacc
-            // 
-            this.txtNhacc.FormattingEnabled = true;
-            this.txtNhacc.Location = new System.Drawing.Point(368, 179);
-            this.txtNhacc.Name = "txtNhacc";
-            this.txtNhacc.Size = new System.Drawing.Size(127, 24);
-            this.txtNhacc.TabIndex = 24;
             // 
             // frm_hanghoa
             // 
