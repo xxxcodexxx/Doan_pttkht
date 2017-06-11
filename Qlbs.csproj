@@ -45,23 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\ChiTietHoaDonNhap.cs" />
     <Compile Include="Class\ChiTietHoaDonXuat.cs" />
     <Compile Include="Class\HangHoa.cs" />
+    <Compile Include="Class\HoaDonNhap.cs" />
     <Compile Include="Class\HoaDonXuat.cs" />
     <Compile Include="Class\KhachHang.cs" />
     <Compile Include="Class\LoaiHang.cs" />
     <Compile Include="Class\NhaCungCap.cs" />
     <Compile Include="Class\Nhanvien.cs" />
+    <Compile Include="Control\ChiTietHoaDonNhapctrl.cs" />
     <Compile Include="Control\ChiTietHoaDonXuatctrl.cs" />
     <Compile Include="Control\HangHoactrl.cs" />
+    <Compile Include="Control\HoaDonNhapctrl.cs" />
     <Compile Include="Control\HoaDonXuatctrl.cs" />
     <Compile Include="Control\KhachHangctrl.cs" />
     <Compile Include="Control\LoaiHangctrl.cs" />
     <Compile Include="Control\NhaCCctrl.cs" />
     <Compile Include="Control\NhanVienctrl.cs" />
+    <Compile Include="Model\ChiTietHoaDonNhapMod.cs" />
     <Compile Include="Model\ChiTietHoaDonXuatMod.cs" />
     <Compile Include="Model\ConnectSql.cs" />
     <Compile Include="Model\HangHoaMod.cs" />
+    <Compile Include="Model\HoaDonNhapMod.cs" />
     <Compile Include="Model\HoaDonXuatMod.cs" />
     <Compile Include="Model\KhachHangModel.cs" />
     <Compile Include="Model\LoaiHangMod.cs" />

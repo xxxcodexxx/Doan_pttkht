@@ -81,6 +81,31 @@ namespace Qlbs.Model
             return true;
         }
 
+        //public bool searchData(string key)
+        //{
+        //    string sqlSearch = "Select * from tb_KhachHang Where TenKH like N'%"+key+"%'";
+        //    SqlCommand cmd = new SqlCommand(sqlSearch, Con);
+        //    cmd.ExecuteNonQuery();
+        //    SqlDataReader dr = cmd.ExecuteReader();
+        //    DataTable dt = new DataTable();
+        //    dt.Load(dr);
+        //    cmd.CommandType = CommandType.Text;
+        //    cmd.Connection = conn.Connection;
+        //    try
+        //    {
+        //        conn.OpenConn();
+        //        cmd.ExecuteNonQuery();
+        //        conn.CloseConn();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        string mess = ex.Message;
+        //        cmd.Dispose();
+        //        conn.CloseConn();
+        //    }
+        //    return true;
+        //}
+
         public bool deleteData(string mathe)
         {
             cmd.CommandText = "delete tb_KhachHang where MaThe = '" + mathe + "'";

@@ -1,12 +1,11 @@
-﻿using Qlbs.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using Qlbs.Model;
 using Qlbs.Class;
+using Qlbs.Model;
 
 namespace Qlbs.Control
 {
@@ -29,6 +28,30 @@ namespace Qlbs.Control
         {
             return hhMod.UpdData(hhObj);
         }
+
+        public bool UpdNhapHang(DataTable dt)
+        {
+            DataTable dthh = new DataTable();
+            dthh = hhMod.GetData();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                for (int j = 0; j < dthh.Rows.Count; j++)
+                {
+                    if (dt.Rows[i][1].ToString() == dthh.Rows[j][0].ToString())
+                    {
+                        int SLcu = int.Parse(dthh.Rows[j][5].ToString());
+                        int SLmoi = int.Parse(dthh.Rows[j][5].ToString()) + int.Parse(dt.Rows[i][3].ToString());
+                        int SLNhap = int.Parse(dthh.Rows[j][4].ToString()) + int.Parse(dt.Rows[i][3].ToString());
+                        if (!hhMod.UpdSL(dthh.Rows[j][0].ToString(), SLmoi, SLNhap))
+                            return false;
+                        break;
+                    }
+                }
+
+            }
+            return true;
+        }
+
         public bool UpdSL(DataTable dt)
         {
             DataTable dthh = new DataTable();
@@ -39,9 +62,9 @@ namespace Qlbs.Control
                 {
                     if (dt.Rows[i][1].ToString() == dthh.Rows[j][0].ToString())
                     {
-                        int SLcu = int.Parse(dthh.Rows[j][3].ToString());
-                        int SLmoi = int.Parse(dthh.Rows[j][3].ToString()) - int.Parse(dt.Rows[i][3].ToString());
-                        if (!hhMod.UpdSL(dthh.Rows[j][0].ToString(), SLmoi))
+                        int SLcu = int.Parse(dthh.Rows[j][5].ToString());
+                        int SLmoi = int.Parse(dthh.Rows[j][5].ToString()) - int.Parse(dt.Rows[i][3].ToString());
+                        if (!hhMod.UpdSL(dthh.Rows[j][0].ToString(), SLmoi, 0))
                             return false;
                         break;
                     }

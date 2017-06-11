@@ -42,7 +42,7 @@ namespace Qlbs.Model
             {
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    cmd.CommandText = "insert into tb_ChiTietHDB values ('" + dt.Rows[i][0].ToString() + "','" + dt.Rows[i][1].ToString() + "'," + dt.Rows[i][2].ToString() + "," + dt.Rows[i][3].ToString() + ")";
+                    cmd.CommandText = "insert into tb_ChiTietHDN (MaHD,MaHH,DonGia,SoLuong) values ('" + dt.Rows[i][0].ToString() + "','" + dt.Rows[i][1].ToString() + "'," + dt.Rows[i][2].ToString() + "," + dt.Rows[i][3].ToString() + ")";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = con.Connection;
                     con.OpenConn();

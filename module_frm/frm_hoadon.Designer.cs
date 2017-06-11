@@ -34,9 +34,12 @@
             // 
             // btnHoadn
             // 
-            this.btnHoadn.Location = new System.Drawing.Point(141, 55);
+            this.btnHoadn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHoadn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoadn.ForeColor = System.Drawing.Color.Blue;
+            this.btnHoadn.Location = new System.Drawing.Point(93, 39);
             this.btnHoadn.Name = "btnHoadn";
-            this.btnHoadn.Size = new System.Drawing.Size(112, 48);
+            this.btnHoadn.Size = new System.Drawing.Size(133, 29);
             this.btnHoadn.TabIndex = 0;
             this.btnHoadn.Text = "Hóa đơn Nhập";
             this.btnHoadn.UseVisualStyleBackColor = true;
@@ -44,9 +47,12 @@
             // 
             // btnHoadx
             // 
-            this.btnHoadx.Location = new System.Drawing.Point(141, 109);
+            this.btnHoadx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHoadx.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoadx.ForeColor = System.Drawing.Color.Blue;
+            this.btnHoadx.Location = new System.Drawing.Point(93, 84);
             this.btnHoadx.Name = "btnHoadx";
-            this.btnHoadx.Size = new System.Drawing.Size(112, 49);
+            this.btnHoadx.Size = new System.Drawing.Size(133, 29);
             this.btnHoadx.TabIndex = 1;
             this.btnHoadx.Text = "Hóa đơn Xuất";
             this.btnHoadx.UseVisualStyleBackColor = true;
@@ -56,11 +62,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 261);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(338, 170);
             this.Controls.Add(this.btnHoadx);
             this.Controls.Add(this.btnHoadn);
             this.Name = "frm_hoadon";
-            this.Text = "frm_hoadon";
+            this.Text = "LỰA CHỌN HÓA ĐƠN";
             this.ResumeLayout(false);
 
         }

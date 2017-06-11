@@ -59,7 +59,7 @@ namespace Qlbs.Model
 
         public bool AddData(HangHoa hhObj)
         {
-            cmd.CommandText = "Insert into tb_HangHoa values ('" + hhObj.Ma + "', N'" + hhObj.TenHangHoa + "','" + hhObj.Loai + "','"+hhObj.Nhacc+ "','" + hhObj.SoLuong + "','" + hhObj.Soluongton + "','" + hhObj.DonGia + "',CONVERT(DATE,'" + hhObj.Hsd + "',103),CONVERT(DATE,'" + hhObj.Hsd + "',103),N'" + hhObj.Donvi + "' )";
+            cmd.CommandText = "Insert into tb_HangHoa values ('" + hhObj.Ma + "', N'" + hhObj.TenHangHoa + "','" + hhObj.Loai + "','"+hhObj.Nhacc+ "'," + hhObj.SoLuong + "," + hhObj.Soluongton + "," + hhObj.DonGia + ",CONVERT(DATE,'" + hhObj.Hsd + "',103),CONVERT(DATE,'" + hhObj.Hsd + "',103),N'" + hhObj.Donvi + "' )";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try
@@ -79,7 +79,26 @@ namespace Qlbs.Model
 
         public bool UpdData(HangHoa hhObj)
         {
-            cmd.CommandText = "Update tb_HangHoa set TenHH =  N'" + hhObj.TenHangHoa + "', Soluong = " + hhObj.SoLuong + ", Dongia = " + hhObj.DonGia + ", Loai = N'" + hhObj.Loai + "', NhaCC = N'" + hhObj.Nhacc + "', Soluongton = " + hhObj.Soluongton + ", NgaySX = CONVERT(DATE,'" + hhObj.Ngaysx + "',103), HSD = CONVERT(DATE,'" + hhObj.Hsd + "',103), Donvi = N'" + hhObj.Donvi + "' Where MaHH = '" + hhObj.Ma + "'";
+            cmd.CommandText = "Update tb_HangHoa set TenHH =  N'" + hhObj.TenHangHoa + "', Soluong = " + hhObj.SoLuong + ", Dongia = " + hhObj.DonGia + ", Loai = '" + hhObj.Loai + "', NhaCC = '" + hhObj.Nhacc + "', Soluongton = " + hhObj.Soluongton + ", NgaySX = CONVERT(DATE,'" + hhObj.Ngaysx + "',103), HSD = CONVERT(DATE,'" + hhObj.Hsd + "',103), Donvi = N'" + hhObj.Donvi + "' Where MaHH = '" + hhObj.Ma + "'";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                con.OpenConn();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                string mex = ex.Message;
+                cmd.Dispose();
+                con.CloseConn();
+            }
+            return false;
+        }
+        public bool UpdNhapHang(HangHoa hhObj, int SL)
+        {
+            cmd.CommandText = "Update tb_HangHoa set  Soluongton = " + hhObj.Soluongton + SL + ",Soluongton = " + hhObj.SoLuong + SL + " Where MaHH = '" + hhObj.Ma + "'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try
@@ -97,9 +116,10 @@ namespace Qlbs.Model
             return false;
         }
 
-        public bool UpdSL(string mahh, int SL)
+
+        public bool UpdSL(string mahh, int SL, int SLN)
         {
-            cmd.CommandText = "Update tb_HangHoa set  SoLuong = " + SL + " Where MaHH = '" + mahh + "'";
+            cmd.CommandText = "Update tb_HangHoa set  Soluongton = " + SL + ", Soluong = " + SLN +" Where MaHH = '" + mahh + "'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try
@@ -116,6 +136,7 @@ namespace Qlbs.Model
             }
             return false;
         }
+        
 
         public bool DelData(string ma)
         {

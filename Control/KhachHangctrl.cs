@@ -27,7 +27,10 @@ namespace Qlbs.Control
         {
             return khm.updateData(khobj);
         }
-
+        //public bool searchData(string key)
+        //{
+        //    return khm.searchData(key);
+        //}
         public bool deleteData(string mathe)
         {
             return khm.deleteData(mathe);

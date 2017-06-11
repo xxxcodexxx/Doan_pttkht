@@ -49,13 +49,45 @@ namespace Qlbs.module_frm
 
         private void btnthoat_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            DialogResult dr =  MessageBox.Show("Bạn muốn thoát chương trình? ", "Thông Báo", MessageBoxButtons.OKCancel);
+            if(dr == DialogResult.OK)
+                this.Close();
 
+        }
         private void btnQllh_Click(object sender, EventArgs e)
         {
             frm_loaihang form_loaih = new frm_loaihang();
             form_loaih.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -93,18 +93,17 @@ namespace Qlbs.module_frm
             txtMahd.Enabled = e;
             cboNvl.Enabled = e;
             cboKh.Enabled = e;
-            txtDongia.Enabled = e;
-            btnThemhd.Enabled = !e;
+            txtDongia.Enabled = false;
+            btnTaomoihd.Enabled = !e;
             btnXoa.Enabled = !e;
             btnInhd.Enabled = !e;
             btnLuuhd.Enabled = e;
             btnHuy.Enabled = e;
             btnBot.Enabled = e;
             btnThemhd.Enabled = e;
-            btnCham.Enabled = e;
-            btnBot.Enabled = e;
             cboHangHoa.Enabled = e;
             txtSolghd.Enabled = e;
+            txtNgayLap.Enabled = e;
 
 
         }
@@ -170,7 +169,6 @@ namespace Qlbs.module_frm
             LoadcboNV();
             LoadcboHH();
             LoadcboKhachHang();
-
             dtDSCT.Rows.Clear();
             dtDSCT.Columns.Add("MaHD");
             dtDSCT.Columns.Add("HangHoa");
@@ -194,8 +192,8 @@ namespace Qlbs.module_frm
 
         private void btnInhd_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hóa đơn của khách hàng " + cboKh + " có tổng tiền là: "+lblThanhtien, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            MessageBox.Show("Hóa đơn của khách hàng" + cboKh.DisplayMember.ToString() +" có tổng tiền là: "+lblThanhtien, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        
         }
 
         private void btnLuuhd_Click(object sender, EventArgs e)
@@ -222,11 +220,7 @@ namespace Qlbs.module_frm
             else
                 return;
         }
-
-        private void btnCham_Click(object sender, EventArgs e)
-        {
-            txtNgayLap.Enabled = true;
-        }
+        
 
         private void btnThemhd_Click(object sender, EventArgs e)
         {
@@ -281,7 +275,7 @@ namespace Qlbs.module_frm
 
                 txtDongia.Text = (gia * 1.1).ToString();
 
-                lblThanhtien.Text = (double.Parse(txtDongia.Text) * int.Parse(txtSolghd.Text)).ToString();
+                //lblThanhtien.Text = (double.Parse(txtDongia.Text) * int.Parse(txtSolghd.Text)).ToString();
             }
         }
 
@@ -309,6 +303,24 @@ namespace Qlbs.module_frm
                 dtgDanhshh.DataSource = null;
             }
             bingding1();
+        }
+
+        private void txtDongia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Dữ liệu nhập phải là số!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+        }
+
+        private void txtSolghd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Dữ liệu nhập phải là số!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
         }
     }
 }

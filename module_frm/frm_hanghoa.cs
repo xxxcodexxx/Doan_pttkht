@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace Qlbs.module_frm
     public partial class frm_hanghoa : Form
     {
         HangHoactrl hhCtr = new HangHoactrl();
+        DataTable dtDSCT = new System.Data.DataTable();
         private int flagLuu = 0;
         public frm_hanghoa()
         {
@@ -89,14 +91,19 @@ namespace Qlbs.module_frm
         {
             hh.Ma = txtMahh.Text.Trim();
             hh.TenHangHoa = txtTenhh.Text.Trim();
-            hh.Loai = txtLoaih.Text.Trim();
-            hh.Nhacc = txtNhacc.Text.Trim();
-            //hh.Soluongton = int.Parse(txtSlton.Text.Trim());
+            hh.Loai = txtLoaih.SelectedValue.ToString();
+            hh.Nhacc = txtNhacc.SelectedValue.ToString();
+            hh.Soluongton = int.Parse(txtSlco.Text.Trim());
             hh.DonGia = int.Parse(txtDg.Text.Trim());
             hh.SoLuong = int.Parse(txtSlco.Text.Trim());
             hh.Donvi = txtDonvi.Text.Trim();
             hh.Hsd = txtNgsx.Text.Trim();
             hh.Hsd = txtHansd.Text.Trim();
+        }
+        private void addDataSl(HangHoa hh)
+        {
+            hh.SoLuong += int.Parse(txtSlco.Text.Trim());
+            hh.Soluongton = hh.Soluongton + int.Parse(txtSlco.Text.Trim());
         }
 
         private void DisEnl(bool e)
@@ -108,6 +115,7 @@ namespace Qlbs.module_frm
             txtLoaih.Enabled = e;
             txtDonvi.Enabled = e;
             btnHuy.Enabled = e;
+            btnNhapHang.Enabled = !e;
             txtMahh.Enabled = e;
             txtTenhh.Enabled = e;
             txtDg.Enabled = e;
@@ -151,9 +159,9 @@ namespace Qlbs.module_frm
         private void btnLuu_Click(object sender, EventArgs e)
         {
             HangHoa hhObj = new HangHoa();
-            addData(hhObj);
             if (flagLuu == 0)
             {
+                addData(hhObj);
                 if (hhCtr.AddData(hhObj))
                     MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
@@ -161,6 +169,7 @@ namespace Qlbs.module_frm
             }
             else if (flagLuu == 1)
             {
+                addData(hhObj);
                 if (hhCtr.UpdData(hhObj))
                     MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
@@ -168,7 +177,8 @@ namespace Qlbs.module_frm
             }
             else
             {
-                if (hhCtr.UpdData(hhObj))
+                addDataSl(hhObj);
+                if (hhCtr.UpdData(hhObj) && hhCtr.UpdNhapHang(dtDSCT))
                     MessageBox.Show("Nhập hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 else
                     MessageBox.Show("Nhập hàng không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -184,6 +194,47 @@ namespace Qlbs.module_frm
                 frm_hanghoa_Load(sender, e);
             else
                 return;
+        }
+
+        private void btnNhapHang_Click(object sender, EventArgs e)
+        {
+            DisEnl(false);
+            flagLuu = 2;
+            btnadd.Enabled = false;
+            btnEdit.Enabled = false;
+            btnXoa.Enabled = false;
+            btnLuu.Enabled = true;
+            btnHuy.Enabled = true;
+            txtSlco.Enabled = true;
+        }
+
+        private void txtSlco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Dữ liệu nhập phải là số!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+        }
+
+        private void txtDg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Dữ liệu nhập phải là số!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection("Data Source = XCODE; Initial Catalog = QLST; User ID = XCODE279; Password = 123; Integrated Security = True; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
+            conn.Open();
+            SqlDataAdapter adp = new SqlDataAdapter("Select * from tb_HangHoa where TenHH like N'%" + txtKeysearch.Text + "%'", conn);
+            DataSet ds = new DataSet();
+            adp.Fill(ds, "tb_HangHoa");
+            dtgvDS.DataSource = ds.Tables["tb_HangHoa"];
+            conn.Close();
         }
     }
 }

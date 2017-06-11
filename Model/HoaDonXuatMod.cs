@@ -37,7 +37,7 @@ namespace Qlbs.Model
 
         public bool AddData(HoaDonXuat hdObj)
         {
-            cmd.CommandText = "insert into tb_HoaDonBan (MaHD, MaThe, NgayLap, NhanVien) values (" + hdObj.Mahd + "," + hdObj.KhachHang + ", CONVERT (date,'" + hdObj.NgayLap + "',103)," + hdObj.NguoiLap + ")";
+            cmd.CommandText = "insert into tb_HoaDonBan (MaHD, MaThe, NgayLap, NhanVien) values ('" + hdObj.Mahd + "','" + hdObj.KhachHang + "', CONVERT (date,'" + hdObj.NgayLap + "',103),'" + hdObj.NguoiLap + "')";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try
@@ -57,7 +57,7 @@ namespace Qlbs.Model
 
         public bool DelData(string ma)
         {
-            cmd.CommandText = "Delete tb_HoaDonBan Where MaHD = '" + ma + "'";
+            cmd.CommandText = "Delete tb_ChiTietHDB Where MaHD = '" + ma + "' Delete tb_HoaDonBan Where MaHD = '" + ma + "'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try
