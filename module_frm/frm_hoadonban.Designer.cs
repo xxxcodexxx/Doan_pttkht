@@ -481,6 +481,7 @@
             this.Controls.Add(this.btnTaomoihd);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_hoadonban";
             this.Text = "THÔNG TIN HÓA ĐƠN BÁN";
             this.Load += new System.EventHandler(this.frm_hoadonban_Load);

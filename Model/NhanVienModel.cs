@@ -18,7 +18,7 @@ namespace Qlbs.Model
         {
             DataTable dt = new DataTable();
 
-            cmd.CommandText = "select * from tb_NhanVien";
+            cmd.CommandText = "select * from tb_NhanVien where MaNV <> 'ADMIN'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn.Connection;
 

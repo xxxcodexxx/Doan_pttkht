@@ -1,4 +1,5 @@
-﻿using Qlbs.module_frm;
+﻿using Qlbs.login_frm;
+using Qlbs.module_frm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Qlbs
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_main());
+            Application.Run(new frm_Login());
         }
     }
 }

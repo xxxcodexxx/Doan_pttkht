@@ -11,18 +11,18 @@ namespace Qlbs.Control
 {
     class ChiTietHoaDonXuatctrl
     {
-        ChiTietHoaDonXuatMod cthdxMod = new ChiTietHoaDonXuatMod();
+        ChiTietHoaDonXuatMod cthdnMod = new ChiTietHoaDonXuatMod();
         public DataTable GetData(string mahd)
         {
-            return cthdxMod.GetData(mahd);
+            return cthdnMod.GetData(mahd);
         }
         public bool AddData(DataTable dt)
         {
-            return cthdxMod.AddData(dt);
+            return cthdnMod.AddData(dt);
         }
         public bool DelData(string ma)
         {
-            return cthdxMod.DelData(ma);
+            return cthdnMod.DelData(ma);
         }
 
     }

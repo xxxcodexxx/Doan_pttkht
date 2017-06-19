@@ -56,6 +56,7 @@
             // 
             button1.BackColor = System.Drawing.Color.White;
             button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button1.Cursor = System.Windows.Forms.Cursors.Arrow;
             button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button1.ForeColor = System.Drawing.Color.White;
@@ -66,13 +67,12 @@
             button1.Size = new System.Drawing.Size(108, 73);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = false;
-            button1.UseWaitCursor = true;
-            button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             button2.BackColor = System.Drawing.Color.White;
             button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button2.Cursor = System.Windows.Forms.Cursors.Arrow;
             button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button2.ForeColor = System.Drawing.Color.White;
@@ -83,12 +83,12 @@
             button2.Size = new System.Drawing.Size(108, 73);
             button2.TabIndex = 8;
             button2.UseVisualStyleBackColor = false;
-            button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             button3.BackColor = System.Drawing.Color.White;
             button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button3.Cursor = System.Windows.Forms.Cursors.Arrow;
             button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button3.ForeColor = System.Drawing.Color.White;
@@ -99,12 +99,12 @@
             button3.Size = new System.Drawing.Size(108, 73);
             button3.TabIndex = 9;
             button3.UseVisualStyleBackColor = false;
-            button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             button4.BackColor = System.Drawing.Color.White;
             button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button4.Cursor = System.Windows.Forms.Cursors.Arrow;
             button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button4.ForeColor = System.Drawing.Color.White;
@@ -115,12 +115,12 @@
             button4.Size = new System.Drawing.Size(108, 73);
             button4.TabIndex = 10;
             button4.UseVisualStyleBackColor = false;
-            button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
             button5.BackColor = System.Drawing.Color.White;
             button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button5.Cursor = System.Windows.Forms.Cursors.Arrow;
             button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button5.ForeColor = System.Drawing.Color.White;
@@ -131,12 +131,12 @@
             button5.Size = new System.Drawing.Size(108, 73);
             button5.TabIndex = 11;
             button5.UseVisualStyleBackColor = false;
-            button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
             button6.BackColor = System.Drawing.Color.White;
             button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            button6.Cursor = System.Windows.Forms.Cursors.Arrow;
             button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             button6.ForeColor = System.Drawing.Color.White;
@@ -147,7 +147,6 @@
             button6.Size = new System.Drawing.Size(108, 73);
             button6.TabIndex = 12;
             button6.UseVisualStyleBackColor = false;
-            button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnQuanlynv
             // 
@@ -289,6 +288,7 @@
             this.button7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
@@ -309,7 +309,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(784, 350);
             this.Controls.Add(this.button7);
             this.Controls.Add(button6);
@@ -326,11 +326,14 @@
             this.Controls.Add(this.btnNhacc);
             this.Controls.Add(this.btnQuanlykh);
             this.Controls.Add(this.btnQuanlynv);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(800, 389);
+            this.MinimumSize = new System.Drawing.Size(800, 389);
             this.Name = "frm_main";
             this.Text = "CHƯƠNG TRÌNH HỖ TRỢ QUẢN LÝ SIÊU THỊ MINI";
-            this.UseWaitCursor = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -275,6 +275,7 @@
             this.cboHangHoa.Name = "cboHangHoa";
             this.cboHangHoa.Size = new System.Drawing.Size(130, 24);
             this.cboHangHoa.TabIndex = 0;
+            this.cboHangHoa.SelectedIndexChanged += new System.EventHandler(this.cboHangHoa_SelectedIndexChanged);
             // 
             // txtSolghd
             // 
@@ -284,6 +285,7 @@
             this.txtSolghd.Name = "txtSolghd";
             this.txtSolghd.Size = new System.Drawing.Size(130, 23);
             this.txtSolghd.TabIndex = 2;
+            this.txtSolghd.TextChanged += new System.EventHandler(this.txtSolghd_TextChanged);
             // 
             // label7
             // 
@@ -484,6 +486,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_hoadonnhap";
             this.Text = "THÔNG TIN HÓA ĐƠN NHẬP";
             this.Load += new System.EventHandler(this.frm_hoadonnhap_Load);

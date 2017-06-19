@@ -297,6 +297,7 @@
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_nhacc";
             this.Text = "THÔNG TIN NHÀ CUNG CẤP";
             this.Load += new System.EventHandler(this.frm_nhacc_Load);

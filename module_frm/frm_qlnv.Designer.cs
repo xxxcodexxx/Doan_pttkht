@@ -346,6 +346,7 @@
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnadd);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_nhanvien";
             this.Text = "THÔNG TIN NHÂN VIÊN";
             this.Load += new System.EventHandler(this.frmNhanvien_Load);

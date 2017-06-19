@@ -1,5 +1,6 @@
 ﻿using Qlbs.Class;
 using Qlbs.Control;
+using Qlbs.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -84,7 +85,7 @@ namespace Qlbs.module_frm
             txtDg.Text = "";
             txtDonvi.Text = "";
             txtNgsx.Value = DateTime.Now.Date;
-            txtHansd.Value = DateTime.Now.Date;;
+            txtHansd.Value = DateTime.Now.Date; ;
         }
 
         private void addData(HangHoa hh)
@@ -93,9 +94,7 @@ namespace Qlbs.module_frm
             hh.TenHangHoa = txtTenhh.Text.Trim();
             hh.Loai = txtLoaih.SelectedValue.ToString();
             hh.Nhacc = txtNhacc.SelectedValue.ToString();
-            hh.Soluongton = int.Parse(txtSlco.Text.Trim());
             hh.DonGia = int.Parse(txtDg.Text.Trim());
-            hh.SoLuong = int.Parse(txtSlco.Text.Trim());
             hh.Donvi = txtDonvi.Text.Trim();
             hh.Hsd = txtNgsx.Text.Trim();
             hh.Hsd = txtHansd.Text.Trim();
@@ -105,7 +104,19 @@ namespace Qlbs.module_frm
             hh.SoLuong += int.Parse(txtSlco.Text.Trim());
             hh.Soluongton = hh.Soluongton + int.Parse(txtSlco.Text.Trim());
         }
-
+        private void editData(HangHoa hh)
+        {
+            hh.Ma = txtMahh.Text.Trim();
+            hh.TenHangHoa = txtTenhh.Text.Trim();
+            hh.Loai = txtLoaih.SelectedValue.ToString();
+            hh.Nhacc = txtNhacc.SelectedValue.ToString();
+            hh.Soluongton = int.Parse(txtSlton.Text.Trim());
+            hh.DonGia = int.Parse(txtDg.Text.Trim());
+            hh.SoLuong = int.Parse(txtSlco.Text.Trim());
+            hh.Donvi = txtDonvi.Text.Trim();
+            hh.Hsd = txtNgsx.Text.Trim();
+            hh.Hsd = txtHansd.Text.Trim();
+        }
         private void DisEnl(bool e)
         {
             btnadd.Enabled = !e;
@@ -120,7 +131,7 @@ namespace Qlbs.module_frm
             txtTenhh.Enabled = e;
             txtDg.Enabled = e;
             txtNhacc.Enabled = e;
-            txtSlco.Enabled = e;
+            txtSlco.Enabled = false;
             txtSlton.Enabled = false;
             txtHansd.Enabled = e;
             txtNgsx.Enabled = e;
@@ -159,31 +170,54 @@ namespace Qlbs.module_frm
         private void btnLuu_Click(object sender, EventArgs e)
         {
             HangHoa hhObj = new HangHoa();
-            if (flagLuu == 0)
-            {
-                addData(hhObj);
-                if (hhCtr.AddData(hhObj))
-                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("Thêm không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (flagLuu == 1)
-            {
-                addData(hhObj);
-                if (hhCtr.UpdData(hhObj))
-                    MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("Sửa không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                addDataSl(hhObj);
-                if (hhCtr.UpdData(hhObj) && hhCtr.UpdNhapHang(dtDSCT))
-                    MessageBox.Show("Nhập hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("Nhập hàng không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            frm_hanghoa_Load(sender, e);
+
+            HangHoaMod hhMod = new HangHoaMod();
+            DataTable dthh = new DataTable();
+            dthh = hhMod.GetData();
+            DataTable dt = new DataTable();
+            dt.Rows.Clear();
+            dt.Columns.Add("MaHH");
+            //for (int i = 0; i <= dt.Rows.Count; i++)
+            //{
+            //    for (int j = 0; j < dthh.Rows.Count; j++)
+            //    {
+            //        if (dt.Rows[i][0].ToString() != dthh.Rows[j][0].ToString())
+            //        {
+                        if (flagLuu == 0)
+                        {
+                            addData(hhObj);
+                            if (hhCtr.AddData(hhObj))
+                                MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                MessageBox.Show("Thêm không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else if (flagLuu == 1)
+                        {
+                            editData(hhObj);
+                            if (hhCtr.UpdData(hhObj))
+                                MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                MessageBox.Show("Sửa không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            addDataSl(hhObj);
+                            if (hhCtr.UpdData(hhObj) && hhCtr.UpdNhapHang(dtDSCT))
+                                MessageBox.Show("Nhập hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                MessageBox.Show("Nhập hàng không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        frm_hanghoa_Load(sender, e);
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Mã đã tồn tại", "Thông Báo", MessageBoxButtons.OKCancel);
+                    //    txtMahh.Focus();
+                   //}
+            //    }
+
+            //}
+
 
         }
 
@@ -198,14 +232,8 @@ namespace Qlbs.module_frm
 
         private void btnNhapHang_Click(object sender, EventArgs e)
         {
-            DisEnl(false);
-            flagLuu = 2;
-            btnadd.Enabled = false;
-            btnEdit.Enabled = false;
-            btnXoa.Enabled = false;
-            btnLuu.Enabled = true;
-            btnHuy.Enabled = true;
-            txtSlco.Enabled = true;
+            frm_hoadonnhap frm_nhap = new frm_hoadonnhap();
+            frm_nhap.Show();
         }
 
         private void txtSlco_KeyPress(object sender, KeyPressEventArgs e)

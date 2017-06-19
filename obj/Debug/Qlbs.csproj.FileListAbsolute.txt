@@ -15,3 +15,4 @@ C:\Users\em Don\Documents\Visual Studio 2015\doan\Qlbs\Qlbs\obj\Debug\Qlbs.modul
 C:\Users\em Don\Documents\Visual Studio 2015\doan\Qlbs\Qlbs\obj\Debug\Qlbs.frm_nhanvien.resources
 C:\Users\em Don\Documents\Visual Studio 2015\doan\Qlbs\Qlbs\obj\Debug\Qlbs.module_frm.frm_hoadonban.resources
 C:\Users\em Don\Documents\Visual Studio 2015\doan\Qlbs\Qlbs\obj\Debug\Qlbs.module_frm.frm_hoadonnhap.resources
+C:\Users\em Don\Documents\Visual Studio 2015\doan\Qlbs\Qlbs\obj\Debug\Qlbs.login_frm.frm_Login.resources

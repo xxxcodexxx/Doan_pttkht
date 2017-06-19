@@ -46,8 +46,6 @@ namespace Qlbs.module_frm
             txtGtkh.DataBindings.Add("Text", dtgkh.DataSource, "Gioitinh");
             txtNskh.DataBindings.Clear();
             txtNskh.DataBindings.Add("Text", dtgkh.DataSource, "Ngaysinh");
-            txtDiem.DataBindings.Clear();
-            txtDiem.DataBindings.Add("Text", dtgkh.DataSource, "Diem");
         }
 
         void dis_En(bool e)
@@ -58,7 +56,6 @@ namespace Qlbs.module_frm
             txtSdtkh.Enabled = e;
             txtGtkh.Enabled = e;
             txtNskh.Enabled = e;
-            txtDiem.Enabled = e;
             btnadd.Enabled = !e;
             btnEdit.Enabled = !e;
             btnXoa.Enabled = !e;
@@ -81,7 +78,6 @@ namespace Qlbs.module_frm
             khobj.Sdt = txtSdtkh.Text.Trim();
             khobj.Diachi = txtDiachikh.Text.Trim();
             khobj.Ns = txtNskh.Text.Trim();
-            khobj.Diem = int.Parse(txtDiem.Text.Trim());
         }
 
         void loadGt()
@@ -141,6 +137,7 @@ namespace Qlbs.module_frm
         private void btnadd_Click_1(object sender, EventArgs e)
         {
             flagLuu = 0;
+            clearData();
             dis_En(true);
             loadGt();
         }

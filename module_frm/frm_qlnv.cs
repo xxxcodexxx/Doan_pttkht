@@ -80,6 +80,7 @@ namespace Qlbs
             txtTennv.Text = "";
             txtDiachi.Text = "";
             txtSdt.Text = "";
+            txtCmnd.Text = "";
             txtNsnv.Value = DateTime.Now.Date;
             loadControl();
             txtgt.Text = "";

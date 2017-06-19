@@ -15,7 +15,7 @@ namespace Qlbs.module_frm
     public partial class frm_hoadonnhap : Form
     {
         HoaDonNhapctrl hdCtr = new HoaDonNhapctrl();
-        ChiTietHoaDonXuatctrl ctCtr = new ChiTietHoaDonXuatctrl();
+        ChiTietHoaDonNhapctrl ctCtr = new ChiTietHoaDonNhapctrl();
         HangHoactrl hhctrl = new HangHoactrl();
         DataTable dtDSCT = new System.Data.DataTable();
         int vitriclick = 0;
@@ -89,7 +89,7 @@ namespace Qlbs.module_frm
             txtMahd.Enabled = e;
             cboNvl.Enabled = e;
             cboKh.Enabled = e;
-            txtDongia.Enabled = e;
+            txtDongia.Enabled = false;
             btnTaomoihd.Enabled = !e;
             btnXoa.Enabled = !e;
             btnInhd.Enabled = !e;
@@ -159,7 +159,24 @@ namespace Qlbs.module_frm
             return false;
         }
 
+        private void cboHangHoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt = hhctrl.GetData("Where MaHH = '" + cboHangHoa.SelectedValue.ToString() + "'");
+            if (dt.Rows.Count > 0)
+            {
+                double gia = double.Parse(dt.Rows[0][6].ToString());
 
+                txtDongia.Text = gia.ToString();
+
+                //lblThanhtien.Text = (double.Parse(txtDongia.Text) * int.Parse(txtSolghd.Text)).ToString();
+            }
+        }
+
+        private void txtSolghd_TextChanged(object sender, EventArgs e)
+        {
+            lblThanhtien.Text = (double.Parse(txtDongia.Text) * int.Parse(txtSolghd.Text)).ToString();
+        }
         private void btnTaomoihd_Click(object sender, EventArgs e)
         {
             Dis_Enl(true);
@@ -194,6 +211,10 @@ namespace Qlbs.module_frm
 
         }
 
+        private void dtgvDSHD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            vitriclick = e.RowIndex;
+        }
         private void btnLuuhd_Click(object sender, EventArgs e)
         {
             HoaDonNhap hdnObj = new HoaDonNhap();
@@ -224,8 +245,8 @@ namespace Qlbs.module_frm
         {
             if (!string.IsNullOrEmpty(txtMahd.Text))
             {
-                if (kiemtraSL(cboHangHoa.SelectedValue.ToString(), int.Parse(txtSolghd.Text.Trim())))
-                {
+                //if (kiemtraSL(cboHangHoa.SelectedValue.ToString(), int.Parse(txtSolghd.Text.Trim())))
+                //{
                     if (!checktrung(cboHangHoa.SelectedValue.ToString()))
                     {
                         DataRow dr = dtDSCT.NewRow();
@@ -241,12 +262,12 @@ namespace Qlbs.module_frm
                         capnhatSL(cboHangHoa.SelectedValue.ToString(), int.Parse(txtSolghd.Text));
                     }
                     dtgvDSHD.DataSource = dtDSCT;
-                }
-                else
-                {
-                    MessageBox.Show("Số lượng không dủ", "Lỗi");
-                    txtSolghd.Focus();
-                }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Số lượng không dủ", "Lỗi");
+                //    txtSolghd.Focus();
+                //}
             }
             else
             {
@@ -263,29 +284,7 @@ namespace Qlbs.module_frm
                 dtgDanhshh.DataSource = dtDSCT;
             }
         }
-        private void cboHangHoa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            DataTable dt = new DataTable();
-            dt = hhctrl.GetData("Where MaHH = '" + cboHangHoa.SelectedValue.ToString() + "'");
-            if (dt.Rows.Count > 0)
-            {
-                double gia = double.Parse(dt.Rows[0][6].ToString());
-
-                txtDongia.Text = gia.ToString();
-
-                //lblThanhtien.Text = (double.Parse(txtDongia.Text) * int.Parse(txtSolghd.Text)).ToString();
-            }
-        }
-
-        private void txtSolghd_TextChanged(object sender, EventArgs e)
-        {
-            lblThanhtien.Text = (double.Parse(txtDongia.Text) * int.Parse(txtSolghd.Text)).ToString();
-        }
-
-        private void dtgvDSHD_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            vitriclick = e.RowIndex;
-        }
+        
 
         private void txtMahd_TextChanged_1(object sender, EventArgs e)
         {

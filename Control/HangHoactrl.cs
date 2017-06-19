@@ -62,9 +62,9 @@ namespace Qlbs.Control
                 {
                     if (dt.Rows[i][1].ToString() == dthh.Rows[j][0].ToString())
                     {
-                        int SLcu = int.Parse(dthh.Rows[j][5].ToString());
+                        int SLcu = int.Parse(dthh.Rows[j][4].ToString());
                         int SLmoi = int.Parse(dthh.Rows[j][5].ToString()) - int.Parse(dt.Rows[i][3].ToString());
-                        if (!hhMod.UpdSL(dthh.Rows[j][0].ToString(), SLmoi, 0))
+                        if (!hhMod.UpdSL(dthh.Rows[j][0].ToString(), SLmoi, SLcu))
                             return false;
                         break;
                     }

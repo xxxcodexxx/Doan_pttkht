@@ -63,6 +63,24 @@
     <Compile Include="Control\LoaiHangctrl.cs" />
     <Compile Include="Control\NhaCCctrl.cs" />
     <Compile Include="Control\NhanVienctrl.cs" />
+    <Compile Include="login_frm\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login_frm\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login_frm\frm_ThayDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login_frm\frm_ThayDoiMatKhau.Designer.cs">
+      <DependentUpon>frm_ThayDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login_frm\frm_DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login_frm\frm_DangKy.Designer.cs">
+      <DependentUpon>frm_DangKy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\ChiTietHoaDonNhapMod.cs" />
     <Compile Include="Model\ChiTietHoaDonXuatMod.cs" />
     <Compile Include="Model\ConnectSql.cs" />
@@ -129,6 +147,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="login_frm\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="module_frm\frm_hanghoa.resx">
       <DependentUpon>frm_hanghoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,9 +199,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="login_frm\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Image\khach-hang.png" />
   </ItemGroup>

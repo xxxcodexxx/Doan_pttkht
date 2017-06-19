@@ -469,6 +469,7 @@
             this.Controls.Add(this.btnadd);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_hanghoa";
             this.Text = "THÔNG TIN HÀNG HÓA";
             this.Load += new System.EventHandler(this.frm_hanghoa_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_hoadon));
             this.btnHoadn = new System.Windows.Forms.Button();
             this.btnHoadx = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -66,6 +67,7 @@
             this.ClientSize = new System.Drawing.Size(338, 170);
             this.Controls.Add(this.btnHoadx);
             this.Controls.Add(this.btnHoadn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_hoadon";
             this.Text = "LỰA CHỌN HÓA ĐƠN";
             this.ResumeLayout(false);
